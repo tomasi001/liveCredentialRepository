@@ -1,0 +1,20 @@
+// create styling for home elements
+
+// style primary gradient class
+.primary-gradient {
+  background: #10001f;
+  background: linear-gradient(to right, #000000, #0d4d72, #093650, #863303);
+}
+
+// style specific h5 element
+#root > div > header > nav > a > h5 {
+  font-size: 40px;
+  font-family: "Oswald", sans-serif;
+}
+
+// style specific a element
+#navbarNav > ul > li > div > a {
+  margin-right: 20px;
+  font-size: 20px;
+  font-family: "Oswald", sans-serif;
+}

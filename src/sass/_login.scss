@@ -1,0 +1,195 @@
+// login/ form styling
+
+// style login id
+#login {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @extend .position-relative;
+  @extend .text-center;
+
+  // style default bg class
+  .default-bg {
+    @extend .background;
+    color: #505050;
+  }
+
+  // style login box class
+  .login-box {
+    max-width: 960px;
+    margin: 0 auto;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+
+    // style bg img class
+    > .bg-img {
+      padding: 0;
+      border-radius: 10px 0 0 10px;
+      background: rgba(0, 0, 0, 0.4)
+        url(http://localhost:3000/static/media/bg_img.92414fa6.jpg) top left
+        repeat;
+      background-size: cover;
+      top: 0;
+      bottom: 0;
+      opacity: 1;
+    }
+
+    // style info class
+    .info {
+      height: 450px;
+      position: relative;
+
+      // style logo class
+      > .logo {
+        text-align: left;
+        margin: 20px;
+
+        // style nave brand class
+        > .nav-brand {
+          font-size: 22px;
+          @extend .font-bold;
+          color: #505050;
+        }
+      }
+
+      // style btn section class
+      > .btn-section {
+        position: absolute;
+        top: 40%;
+        right: 0;
+        margin-bottom: 0;
+
+        // style link bt class
+        .link-btn {
+          font-size: 12px;
+          @extend .font-bold;
+        }
+
+        // style link btn active class
+        .link-btn.active {
+          background-color: #ff214f;
+          color: #fff;
+        }
+
+        // style btn primary class
+        > .btn-primary {
+          @extend .text-center;
+          line-height: 30px;
+          width: 100px;
+          text-transform: uppercase;
+          border-radius: 50px 0 0 50px;
+          margin-bottom: 15px;
+          border: none;
+
+          // set style when focused on
+          &:focus {
+            outline: none;
+            box-shadow: none;
+          }
+        }
+      }
+    }
+  }
+
+  /* login form styling */
+
+  // style form section clas
+  .form-section {
+    @extend .text-center;
+    max-width: 400px;
+    margin: 0 auto;
+    @extend .width-100;
+
+    // style title class
+    > .title {
+      margin: 10px 0 50px 0;
+
+      // style h3 elements in title class
+      > h3 {
+        font-size: 25px;
+        @extend .font-bold;
+        color: #505050;
+      }
+    }
+
+    // style login inner form class
+    .login-inner-form {
+      @extend .position-relative;
+      color: #979797;
+
+      // style form box class
+      .form-box {
+        float: right;
+        @extend .width-100;
+        @extend .position-relative;
+
+        // style icon class
+        .icon {
+          position: absolute;
+          right: 25px;
+          top: 10px;
+        }
+
+        // import icon
+        .icon.email::before {
+          @extend .font-awesome;
+          content: "\f0e0";
+        }
+
+        // import icon
+        .icon.lock::before {
+          @extend .font-awesome;
+          @extend .font-bold;
+          content: "\f023";
+        }
+
+        // import icon
+        .icon.division::before {
+          @extend .font-awesome;
+          content: "\f1ad";
+        }
+
+        // import icon
+        .icon.unit::before {
+          @extend .font-awesome;
+          @extend .font-bold;
+          content: "\f1ad";
+        }
+
+        // style input text class
+        > .input-text {
+          font-size: 14px;
+          outline: none;
+          color: #616161;
+          border-radius: 50px;
+          border: 1px solid transparent;
+          @extend .background;
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+          padding: 11px 45px 11px 20px;
+          @extend .width-100;
+          margin-bottom: 10px;
+        }
+      }
+
+      // style primary button class
+      .primary-btn {
+        background: #55bb7c;
+        @extend .width-100;
+        border: none;
+        color: #fff;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        padding: 10px 30px 9px 30px;
+        cursor: pointer;
+        height: 45px;
+        border-radius: 50px;
+        margin-top: 20px;
+
+        // style when hovered over
+        &:hover {
+          background: #2d6342;
+        }
+      }
+    }
+  }
+}
